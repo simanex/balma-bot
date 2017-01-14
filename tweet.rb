@@ -26,8 +26,9 @@ class Tweet
     begin
       @client.update(tweet)
     rescue => e
-      nil #TODO
+      puts "エラーだよ" #TODO
     end
+    puts "done"
   end
 end
 
