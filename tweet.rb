@@ -5,7 +5,18 @@ class Tweet
 
   def initialize
     keys = YAML.load_file('./config.yml')
-    @text = ["がんばれニッポン！", "おいしいよ！", "また残業？困っちゃうね！"]
+    @text = [
+      "がんばれニッポン！",
+      "おいしいよ！",
+      "また残業？困っちゃうね！",
+      "月曜日の日替わりはチャナ豆とほうれん草のカレーだよ！",
+      "火曜日の日替わりはキーマカリーだよ！",
+      "水曜日の日替わりはマトンカリーだよ！",
+      "木曜日の日替わりはバターチキンカリーだよ！",
+      "金曜日の日替わりはほうれん草とチキンのカリーだよ！",
+      "土曜日の日替わりは卵カリーだよ！",
+      "日曜日はおやすみだよ！"
+    ]
 
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key = keys["api_key"]
@@ -16,6 +27,7 @@ class Tweet
   end
 
   def random_tweet
+    puts rand(rand(@text.length))
     tweet = @text[rand(@text.length)]
     update(tweet)
   end
@@ -25,6 +37,7 @@ class Tweet
   def update(tweet)
     begin
       @client.update(tweet)
+      puts "tweet!"
     rescue => e
       puts "エラーだよ" #TODO
     end

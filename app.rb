@@ -10,4 +10,5 @@ end
 get '/random_tweet' do
   Tweet.new.random_tweet
   'check your tweet'
+  puts tweet
 end
