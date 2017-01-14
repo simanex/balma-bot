@@ -8,7 +8,7 @@ end
 
 # URL '/random_tweet'でアクセス
 get '/random_tweet' do
-  Tweet.new.random_tweet
-  'check your tweet'
-  puts tweet
+  #Tweet.new.random_tweet
+  #'check your tweet'
+  'Cerrado'
 end

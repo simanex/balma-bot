@@ -36,11 +36,9 @@ class Tweet
   def update(tweet)
     begin
       @client.update(tweet)
-      puts "tweet!"
     rescue => e
-      puts "エラーだよ" #TODO
+      nil #TODO
     end
-    puts "done"
   end
 end
 
