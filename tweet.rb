@@ -27,7 +27,6 @@ class Tweet
   end
 
   def random_tweet
-    puts rand(rand(@text.length))
     tweet = @text[rand(@text.length)]
     update(tweet)
   end
