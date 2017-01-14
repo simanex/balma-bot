@@ -1,3 +1,3 @@
-recuire/relative 'app.rb'
+recuire_relative 'app.rb'
 
 run Sinatra::Application
