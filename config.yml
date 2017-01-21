@@ -1,0 +1,4 @@
+api_key: $api_key
+api_secret: $api_secret
+access_token: $ACCESS_TOKEN
+access_token_secret: $ACCESS_TOKEN_SECRET
