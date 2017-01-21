@@ -26,7 +26,8 @@ class Tweet
 
   def announcement
     daily_curry = @daily_curry[DateTime.now.wday]
-    tweet = "そろそろお昼だね！今日の日替わりは" + daily_curry + "だよ！" + DateTime.now.to_s
+    #tweet = "そろそろお昼だね！今日の日替わりは" + daily_curry + "！"
+    tweet = "さむすぎるよね！"
     update(tweet)
   end
 
