@@ -7,8 +7,8 @@ get '/' do
 end
 
 # URL '/random_tweet'でアクセス
-get '/random_tweet' do
-  #Tweet.new.random_tweet
-  #'check your tweet'
-  'Cerrado'
+get '/announcement' do
+  Tweet.new.announcement
+  'check your tweet'
+  #'Cerrado'
 end

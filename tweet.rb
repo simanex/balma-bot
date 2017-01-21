@@ -1,21 +1,19 @@
 require 'twitter'
 require 'yaml'
+require 'date'
 
 class Tweet
 
   def initialize
     keys = YAML.load_file('./config.yml')
-    @text = [
-      "がんばれニッポン！",
-      "おいしいよ！",
-      "また残業？困っちゃうね！",
-      "月曜日の日替わりはチャナ豆とほうれん草のカレーだよ！",
-      "火曜日の日替わりはキーマカリーだよ！",
-      "水曜日の日替わりはマトンカリーだよ！",
-      "木曜日の日替わりはバターチキンカリーだよ！",
-      "金曜日の日替わりはほうれん草とチキンのカリーだよ！",
-      "土曜日の日替わりは卵カリーだよ！",
-      "日曜日はおやすみだよ！"
+    @daily_curry = [
+      "おやすみ",
+      "チャナ豆とほうれん草のカレー",
+      "キーマカレー",
+      "ポークカレー",
+      "バターチキンカレー",
+      "ほうれん草とチキンのカレー",
+      "卵カレー"
     ]
 
     @client = Twitter::REST::Client.new do |config|
@@ -26,8 +24,9 @@ class Tweet
     end
   end
 
-  def random_tweet
-    tweet = @text[rand(@text.length)]
+  def announcement
+    daily_curry = @daily_curry[DateTime.now.wday]
+    tweet = "そろそろお昼だね！今日の日替わりは" + daily_curry + "だよ！"
     update(tweet)
   end
 
@@ -42,7 +41,7 @@ class Tweet
   end
 end
 
-# random_tweetを実行する
+# announcementを実行する
 if __FILE__ == $0
-  Tweet.new.random_tweet
+  Tweet.new.announcement(daily_curry)
 end
