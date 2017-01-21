@@ -13,7 +13,7 @@ class Tweet
       "ポークカレー",
       "バターチキンカレー",
       "ほうれん草とチキンのカレー",
-      "卵カレー"
+      "たまごカレー"
     ]
 
     @client = Twitter::REST::Client.new do |config|
