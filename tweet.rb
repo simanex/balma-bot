@@ -43,5 +43,5 @@ end
 
 # announcementを実行する
 if __FILE__ == $0
-  Tweet.new.announcement(daily_curry)
+  Tweet.new.announcement
 end
