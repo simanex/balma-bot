@@ -6,7 +6,7 @@ class Tweet
 
   def initialize
     keys = YAML.load_file('./config.yml')
-    @daily_curry = [
+    @tweet = [
       "おやすみ",
       "チャナ豆とほうれん草のカレー",
       "キーマカレー",
