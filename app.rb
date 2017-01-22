@@ -9,13 +9,14 @@ end
 
 # URL '/random_tweet'でアクセス
 get '/announcement' do
-  Tweet.new.announcement
-  'check todays curry'
-  #'Cerrado'
+  # Tweet.new.announcement
+  # 'check todays curry'
+  'Cerrado'
 end
 
 # URL 'random_tweet'でアクセス
 get '/random_tweet' do
-  Tweet.new.random_tweet
-  'check your random_tweet'
+  # Tweet.new.random_tweet
+  # 'check your random_tweet'
+  'Cerrado'
 end
