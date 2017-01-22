@@ -9,8 +9,9 @@ end
 
 # URL '/random_tweet'でアクセス
 get '/announcement' do
-  Tweet.new.announcement
+  # Tweet.new.announcement
   'check todays curry'
+  p @tweet.class
   #'Cerrado'
 end
 
