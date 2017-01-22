@@ -10,7 +10,7 @@ end
 # URL '/random_tweet'でアクセス
 get '/announcement' do
   Tweet.new.announcement
-  'check your tweet'
+  'check todays curry'
   #'Cerrado'
 end
 
