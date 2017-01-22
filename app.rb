@@ -11,7 +11,7 @@ end
 get '/announcement' do
   # Tweet.new.announcement
   'check todays curry'
-  puts @daily_curry
+  puts @tweet
   #'Cerrado'
 end
 
