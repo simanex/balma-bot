@@ -6,15 +6,7 @@ class Tweet
 
   def initialize
     keys = YAML.load_file('./config.yml')
-    @daily_curry = [
-      "おやすみ",
-      "チャナ豆とほうれん草のカレー",
-      "キーマカレー",
-      "ポークカレー",
-      "バターチキンカレー",
-      "ほうれん草とチキンのカレー",
-      "卵カレー"
-    ]
+    @daily_curry = ["おやすみ", "チャナ豆とほうれん草のカレー", "キーマカレー", "ポークカレー", "バターチキンカレー", "ほうれん草とチキンのカレー", "卵カレー"]
 
     @client = Twitter::REST::Client.new do |config|
       config.consumer_key = keys["api_key"]
@@ -25,9 +17,9 @@ class Tweet
   end
 
   def announcement
-    daily_curry = @daily_curry[DateTime.now.wday]
-    # tweet = "そろそろお昼だね！今日の日替わりは" + daily_curry + "だよ！"
-    tweet = daily_curry + DateTime.now.to_s
+    curry_today = @daily_curry[DateTime.now.wday]
+    tweet = "そろそろお昼だね！今日の日替わりは" + curry_today + "だよ！"
+    # tweet = curry_today + DateTime.now.to_s
     update(tweet)
   end
 
