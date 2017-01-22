@@ -1,4 +1,9 @@
-api_key: $API_KEY
-api_secret: $API_SECRET
-access_token: $ACCESS_TOKEN
-access_token_secret: $ACCESS_TOKEN_SECRET
+#api_key: $API_KEY
+#api_secret: $API_SECRET
+#access_token: $ACCESS_TOKEN
+#access_token_secret: $ACCESS_TOKEN_SECRET
+#
+api_key: x93m0caTLsCzOuNkDgnjYU2V4
+api_secret: nJN1yf8hyTNC3N4O0dmAXVM9qctMPXhdCHFuSC4zsWcXW5QxmX
+access_token: 820134712760877056-KlERZ8RBCgpT0snTysaDcVpTJNDLNon
+access_token_secret: nmeXqWLGN3jT5nLQPUKK0kjFih1e9jCmtZ1xLBYPYBSmQ

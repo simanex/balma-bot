@@ -23,7 +23,7 @@ class Tweet
   end
 
   def random_tweet
-    tweet = @tweet(rand(@tweet.length))
+    tweet = @tweet[rand(@tweet.length)]
     update(tweet)
   end
 
