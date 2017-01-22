@@ -1,5 +1,6 @@
 require 'sinatra'
 require_relative 'tweet.rb'
+require_relative 'random_tweet.rb'
 
 # URL'/'でアクセス
 get '/' do
@@ -11,4 +12,10 @@ get '/announcement' do
   Tweet.new.announcement
   'check your tweet'
   #'Cerrado'
+end
+
+# URL 'random_tweet'でアクセス
+get '/random_tweet' do
+  Tweet.new.random_tweet
+  'check your random_tweet'
 end
